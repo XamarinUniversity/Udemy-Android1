@@ -20,15 +20,39 @@ namespace GroceryList
 
 		void OnSaveClick(object sender, EventArgs e)
 		{
+			//
+			// Retrieve the values the user entered into the UI
+			//
 			string name  = FindViewById<EditText>(Resource.Id.nameInput).Text;
 			int    count = int.Parse(FindViewById<EditText>(Resource.Id.countInput).Text);
 
-			// TODO
+			var intent = new Intent();
+
+			//
+			// Load the new data into an Intent for transport back to the Activity that started this one.
+			//
+			intent.PutExtra("ItemName",  name );
+			intent.PutExtra("ItemCount", count);
+
+			//
+			// Send the result code and data back (this does not end the current Activity)
+			//
+			SetResult(Result.Ok, intent);
+
+			//
+			// End the current Activity.
+			//
+			Finish();
 		}
 
 		void OnCancelClick(object sender, EventArgs e)
 		{
-			// TODO
+			//
+			// End the current Activity.
+			// The Result Code will default to Result.Canceled.
+			//
+			Finish();
 		}
 	}
 }
+

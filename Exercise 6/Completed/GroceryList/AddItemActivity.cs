@@ -28,7 +28,7 @@ namespace GroceryList
 
 		void OnCancelClick(object sender, EventArgs e)
 		{
-			Finish();
+			// TODO
 		}
 	}
 }

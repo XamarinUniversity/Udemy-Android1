@@ -19,15 +19,7 @@ namespace GroceryList
 
 		void OnLearnMoreClick(object sender, EventArgs e)
 		{
-			var intent = new Intent();
-
-			//
-			// Use ActionView with an http Data value to launch Android's web browser Activity.
-			//
-			intent.SetAction(Intent.ActionView);
-			intent.SetData(Android.Net.Uri.Parse("http://www.xamarin.com"));
-
-			StartActivity(intent);
+			// TODO
 		}
 	}
 }

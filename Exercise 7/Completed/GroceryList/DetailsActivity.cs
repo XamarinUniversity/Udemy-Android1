@@ -12,7 +12,9 @@ namespace GroceryList
 			base.OnCreate(bundle);
 			SetContentView(Resource.Layout.Details);
 
-			int position = Intent.GetIntExtra("ItemPosition", -1);
+			int position = 0;
+
+			// TODO
 
 			var item = MainActivity.Items[position];
 
